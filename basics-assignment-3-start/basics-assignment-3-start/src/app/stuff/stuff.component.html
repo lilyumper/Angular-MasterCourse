@@ -1,0 +1,17 @@
+<button class="btn btn-primary"
+  (click)="details()">Display Details</button>
+
+<button class="btn btn-primary"
+(click)="reset()">Reset</button>
+
+<h3>CLICKING IT</h3>
+
+<div
+[hidden]="nothing" >
+  <p *ngFor="let click of clicky"
+     [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'white'}"
+      [ngClass]="{'white-text': click >= 5}"> TOTAL CLICK COUNT: {{click}} </p>
+
+
+</div>
+
